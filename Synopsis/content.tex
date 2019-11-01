@@ -42,6 +42,62 @@
   \caption{Подпись к картинке.}\label{fig:latex}
 \end{figure}
 
+\begin{figure}[ht]
+	\centerfloat{
+		\ifdefmacro{\tikzsetnextfilename}{\tikzsetnextfilename{tikz_example_compiled}}{}% присваиваемое предкомпилированному pdf имя файла (не обязательно)
+		\input{Dissertation/images/tikz_scheme.tikz}
+		
+	}
+	\legend{}
+	\caption[Пример \texttt{tikz} схемы]{Пример рисунка, рассчитываемого
+		\texttt{tikz}, который может быть предкомпилирован}\label{fig:tikz_example}
+\end{figure}
+
+\begin{figure}[ht]
+	\centerfloat{
+		\ifdefmacro{\tikzsetnextfilename}{\tikzsetnextfilename{tikz_example_compiled}}{}% присваиваемое предкомпилированному pdf имя файла (не обязательно)
+		\input{Dissertation/images/tikz_scheme.tikz}
+		
+	}
+	\legend{}
+	\caption[Пример \texttt{tikz} схемы]{Пример рисунка, рассчитываемого
+		\texttt{tikz}, который может быть предкомпилирован (2) }\label{fig:tikz_example}
+\end{figure}
+
+\begin{table} [htbp]
+	\centering
+	\changecaptionwidth\captionwidth{15cm}
+	\caption{Название таблицы}\label{tab:Ts0Sib}%
+	\begin{tabular}{| p{3cm} || p{3cm} | p{3cm} | p{4cm}l |}
+		\hline
+		\hline
+		Месяц   & \centering \(T_{min}\), К & \centering \(T_{max}\), К &\centering  \((T_{max} - T_{min})\), К & \\
+		\hline
+		Декабрь &\centering  253.575   &\centering  257.778    &\centering      4.203  &   \\
+		Январь  &\centering  262.431   &\centering  263.214    &\centering      0.783  &   \\
+		Февраль &\centering  261.184   &\centering  260.381    &\centering     \(-\)0.803  &   \\
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table} [htbp]
+	\centering
+	\changecaptionwidth\captionwidth{15cm}
+	\caption{Название таблицы (2)}\label{tab:Ts0Sib}%
+	\begin{tabular}{| p{3cm} || p{3cm} | p{3cm} | p{4cm}l |}
+		\hline
+		\hline
+		Месяц   & \centering \(T_{min}\), К & \centering \(T_{max}\), К &\centering  \((T_{max} - T_{min})\), К & \\
+		\hline
+		Декабрь &\centering  253.575   &\centering  257.778    &\centering      4.203  &   \\
+		Январь  &\centering  262.431   &\centering  263.214    &\centering      0.783  &   \\
+		Февраль &\centering  261.184   &\centering  260.381    &\centering     \(-\)0.803  &   \\
+		\hline
+		\hline
+	\end{tabular}
+\end{table}
+
 Формулы в строку без номера добавляются так:
 \[
   \lambda_{T_s} = K_x\frac{d{x}}{d{T_s}}, \qquad
