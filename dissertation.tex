@@ -56,6 +56,22 @@
 %%% Структура диссертации (ГОСТ Р 7.0.11-2011, 4)
 \include{Dissertation/title}           % Титульный лист
 \include{Dissertation/contents}        % Оглавление
+
+% include synopsis content without updating lists of figures & tables at the end
+\captionsetup{list=no}
+\newcommand{\oldthefigure}{\thefugure}
+\renewcommand{\thefigure}{S.\arabic{figure}}
+\newcommand{\oldthetable}{\thetable}
+\renewcommand{\thetable}{S.\arabic{table}}
+\setcounter{table}{0}
+\clearpage
+\include{Synopsis/content}
+\clearpage
+\setcounter{table}{0}
+\renewcommand{\thetable}{\oldthetable}%\arabic{table}}
+\renewcommand{\thefigure}{\oldthefigure}%\arabic{chapter}.\arabic{figure}}
+\captionsetup{list=yes}
+
 \include{Dissertation/introduction}    % Введение
 \include{Dissertation/part1}           % Глава 1
 \include{Dissertation/part2}           % Глава 2
